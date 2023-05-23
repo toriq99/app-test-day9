@@ -114,18 +114,12 @@ describe("/POST customer", () => {
     // add new data
     test("harus berhasil menambah customer baru & cek data baru", async() => {
         const data = await request(app).post('/customer').send({
-            id: "0dbf3b7f-f70e-40b0-bb31-fc2c0a5b015c",
-            name: "Kaymento",
-            jobTitle: "Developer",
-            email: "myemail@mail.com",
-            phone: "082856549962"
+            "id": "0dbf3b7f-f70e-40b0-bb31-fc2c0a5b018f",
+            "name": "Kaymento",
+            "jobTitle": "Developer",
+            "email": "myemail@mail.com",
+            "phone": "082856549962"
         })
-        // const checkNewUser = await request(app).get('/customerAll')
-
-        // expect(data.body).toMatchSchema(schemaCustomer.properties)
-        // expect((checkNewUser) => {
-        //     checkNewUser.body.data[0].email = "myemail@mail.com";
-        //   })
         expect(200)
     })
 })
